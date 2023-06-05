@@ -2,7 +2,11 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu
+    destination: /home/ubuntu/nodejs
+permissions:
+  - object: /home/ubuntu/nodejs
+    owner: ubuntu
+    group: ubuntu
 hooks:
   AfterInstall:
     - location: scripts/after-install.sh
